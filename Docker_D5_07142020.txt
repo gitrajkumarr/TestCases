@@ -1,0 +1,68 @@
+1. Load https://docs.docker.com/engine/install/centos/
+
+2. Installing the basic yum utilities
+	yum install -y yum-utils
+
+3. Setting up the docker-ce.repo under /etc/yum.repos.d
+	yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+4. Install docker
+	yum install docker-ce docker-ce-cli containerd.io --nobest
+
+5. Check for the docker version
+	docker --version
+
+6. Start the docker 
+	systemctl start docker
+
+7. To check the docker process
+	docker ps
+
+8. To check the docker images list
+	docker images or docker image ls
+
+10. Pulling httpd image from registry(hub.docker.com)
+	docker pull httpd
+
+11. List images
+	docker images
+
+12. Run the docker images
+	docker run -itd <img_id>
+
+13. To stop a container
+	docker stop <contianer_id>
+
+14. To start a container
+	docker start <container_ID>
+
+15. Pulling centos image
+	docker pull centos
+
+16. List the images
+	docker images or docker image ls
+
+17. Running the centos image
+	docker -itd <centos_image_id>
+
+18. Executing a command inside the centos container
+	docker exec -it <centos_continer_id> cat /etc/redhat-release
+
+19. Entering the container using /bin/bash terminal
+	docker exec -it <centos_contianer_id> /bin/bash
+
+20. To name a container
+	docker run --name <name> -itd <container_id>
+
+21. Using copy utility
+	docker cp <SRC> <CONTAINER_ID:<PATH INSIDE A CONTAINER>>
+
+22. Using Volume
+	docker run -itd -v <HOST_DIR>:<CONTAINER_DIR> -P <CONTAINER_ID>
+
+23 Inspect image
+	docker inspect <imageId>
+24 copy form host to inside container
+	docker cp sample.html <dockerid>:/usr/local/apache2/htdocs
+25 
+        docker run -itd -v /root/volume_raj:/usr/local/apache2/htdocs -P dd55772db350

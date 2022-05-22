@@ -1,0 +1,17 @@
+---
+- hosts: server
+  tasks:
+    - name: Install wget utility adn install java
+      yum: name={{item}} state=present
+      with_items:
+        - wget
+        - java
+        - git
+    - name: set the jenkins.repo file under /etc/yum.repos.d
+      command: wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins.io/redhat-stable/jenkins.repo
+    - name: donwload the jenkins.io.key
+      command: rpm --import http://pkg.jenkins.io/redhat-stable/jenkins.io.key
+    - name: Installing jenkins
+      yum: name=jenkins state=present
+    - name: Starting jenkins
+      service: name=jenkins state=started

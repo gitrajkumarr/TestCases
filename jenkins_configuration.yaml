@@ -1,0 +1,12 @@
+---
+- hosts: server
+  vars:
+    attribute: 'jenkins'
+  tasks:
+    - name: Edit the /etc/sysconfig/jenkins file to root user
+      lineinfile:
+         path: /etc/sysconfig/jenkins
+         regexp: '^JENKINS_USER'
+         line: JENKINS_USER={{attribute}}
+    - name: Restarting jenkins
+      service: name=jenkins state=restarted

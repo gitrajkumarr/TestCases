@@ -1,0 +1,199 @@
+rjkumar.ec@gmail.com
+git@10041988
+
+
+Parthi aws:
+
+13.126.55.140
+
+
+# yum update -y
+# yum install -y git
+# git version
+
+# git status
+# git init
+
+# git clone https://github.com/gitrajkumarr/RemoteRepo.git
+
+
+# git add file3.txt
+
+#mkdir folder
+#rm -rf folder
+# vi file3.txt
+# cat file3.txt
+ls -lrt
+pwd
+
+
+
+# git commit -m "committing"
+
+
+git clone ssh://git@github.com:gitrajkumarr/RemoteRepo.git
+
+ssh-keygen -t rsa -b 4096 -C "SSH Public key"
+
+eval $(ssh-agent -s)
+
+
+
+Jenkins:
+=========
+
+echo $! -> whether the command suc executed or not. 0 means success.
+free -m space in memory
+free -h space in giga
+
+wget, curl -> to connect the internet with server.
+
+ps -ef task manger in window
+ps -ef |grep java
+
+systemctl status jenkins
+netstat -anlp|grep 8080(jenkins port)
+ifconfig
+=> inet is ip address
+
+curl -kv http://10.7.156.47:8080/
+
+cat /var/lib/jenkins/secrets/initialAdminPassword
+
+cat /etc/passwd
+
+useradd raj
+passwd raj
+
+cat - only view
+vi -> we can edit and save
+
+vi /etc/sysconfig/jenkins
+
+change Jenkins_user to "ROOT"
+
+systemctrl restart jenkins
+syatemctrl status jenkins
+
+journalctl -xe  - kind of log details what is going on server
+
+http://10.7.156.47:8080/ => jenkins url
+
+
+1. yum install java -y
+    This will install java
+2. yum install wget -y
+    Install wget uitlity in server
+3. wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins.io/redhat-stable/jenkins.repo
+    set the jenkins.repo in /etc/yum.repos.d
+4. rpm --import http://pkg.jenkins.io/redhat-stable/jenkins.io.key
+    Collects the jenkins.io.key
+5. yum install jenkins -y
+    Install jenkins
+6. systemctl start jenkins
+    This will start the jenkins
+7. ps -ef|grep java
+    Check the jenkins process
+8. netstat -anlp|grep 8080
+    Checking the port opened for jenkins
+9. http://<IP>:8080
+    Accessing the jenkins URL
+	
+	
+	
+For Windows:
+===========
+
+java -jar jenkins.war
+
+
+Slave VM Settings:
+=================
+
+ yum update -
+ yum install java -y
+ mkdir /var/lib/jenkins
+ useradd jenkins
+ passwd jenkins
+ chown -R jenkins:jenkins /var/lib/jenkins
+ ls -l
+ vi /etc/ssh/sshd_config
+ systemctl restart sshd
+ systemctl status sshd
+   
+   
+Tomcat Installation
+-------------------
+
+#export VER="9.0.30"
+#cd /usr/share
+#wget https://archive.apache.org/dist/tomcat/tomcat-9/v${VER}/bin/apache-tomcat-${VER}.tar.gz
+#tar xvf apache-tomcat-${VER}.tar.gz -C /usr/share/
+#ln -s /usr/share/apache-tomcat-$VER/ /usr/share/tomcat
+#cd /usr/share/tomcat/bin
+#./catalina.sh start
+#ps -ef|grep tomcat
+
+----------
+Deployment
+----------
+
+#cp /var/lib/jenkins/workspace/PipelineEx/target/addressbook.war /usr/share/tomcat/webapps/
+
+
+etc/ssh sshd_config
+
+ClientALive param to 15m
+
+/client -search
+
+ssh root@(ip)
+
+Python Ansible installation:
+============================
+
+1. Install python3
+    yum install python3 
+
+2. Install ansible
+    pip3 install ansible 
+
+3. Check ansible version
+    ansible --version
+	
+	
+	
+
+Day 1: 6-JULY-2020
+https://web.microsoftstream.com/video/7f02b960-c64c-4f8c-a7b7-57d4f256eafa
+
+Day 2: 7-JUL-2020
+https://web.microsoftstream.com/video/529b39fe-fb07-4789-b3c7-f9c665e6174a
+
+Day 3: 8-JUL-2020
+https://web.microsoftstream.com/video/1a13f6db-368e-45e9-b48d-78664995574a
+
+Day 4: 9-JUL-2020
+https://web.microsoftstream.com/video/9c9cf179-25f7-41f1-b917-3721cb7ac864
+
+Day 5: 10-JUL-2020
+https://web.microsoftstream.com/video/f63021e9-83d2-48a8-bf4b-72d1c8062634
+
+Day 6: 13-JUL-2020
+https://web.microsoftstream.com/video/e8c73ff9-8398-451c-9028-89315eb43c8e
+
+Day 7: 14-JUL-2020
+https://web.microsoftstream.com/video/6d1e2128-275b-40e4-8b36-bc6f89ebca70
+
+Day 8: 15-JUL-2020
+https://web.microsoftstream.com/video/87f3999c-b300-40f9-91ed-0ebe33f9a358
+
+https://web.microsoftstream.com/video/9b3d9624-3cdc-4ec3-b68f-c1651cda6e0c
+
+Day 9: 16-JUL-2020
+https://web.microsoftstream.com/video/a9476e55-45cb-4335-8596-a232b915be4d
+
+Day 10: 17-JUL-2020
+https://web.microsoftstream.com/video/26240c88-4df6-4464-98e9-eb24b2da506d
+
+https://web.microsoftstream.com/video/2acadbdb-9626-41fe-abae-1fd1efeff876

@@ -1,0 +1,123 @@
+    1  clearr
+    2  clear
+    3  yum update
+    4  yum install java -y
+    5  yum install git
+    6  yum install maven -y
+    7  yum install wget -y
+    8  wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins.io/redhat-stable/jenkins.repo
+    9  rpm --import http://pkg.jenkins.io/redhat-stable/jenkins.io.key
+   10  yum install jenkins -y
+   11  cd var/lib/jenkins
+   12  cd /var/lib/jenkins
+   13  cd root/
+   14  cd /root
+   15  pwd
+   16  clear
+   17  vi /etc/sysconfig/jenkins
+   18  clear
+   19  systemctl start jenkins
+   20  ps -ef |grep java
+   21  netstat -anlp|grep 8082
+   22  ifconfig
+   23  systemctl status jenkins
+   24  vi /etc/sysconfig/jenkins
+   25  systemctl restart jenkins
+   26  clear
+   27  vi sysconfig jenkins
+   28  vi /etc/sysconfig/jenkins
+   29  systemctl restart jenkins
+   30  systemctl status jenkins
+   31  cat /var/lib/jenkins/secrets/initialAdminPassword
+   32  clear
+   33  cd /var/lib/jenkins
+   34  ls -l
+   35  cd /workspace
+   36  cd workspace/
+   37  ls -l
+   38  cd root/
+   39  cd /root
+   40  pwd
+   41  clear
+   42  export VER="9.0.30"
+   43  cd /usr/share
+   44  wget https://archive.apache.org/dist/tomcat/tomcat-9/v${VER}/bin/apache-tomcat-${VER}.tar.gz
+   45  tar xvf apache-tomcat-${VER}.tar.gz -C /usr/share/
+   46  ln -s /usr/share/apache-tomcat-$VER/ /usr/share/tomcat
+   47  cd /usr/share/tomcat/bin
+   48  ./catalina.sh start
+   49  cd /usr/share/tomcat/bin
+   50  ls -l
+   51  cd /usr/share/tomcat
+   52  ls -l
+   53  cd conf/
+   54  ls -l
+   55  vi server.xml
+   56  cd ../
+   57  ls -l
+   58  cd bin/
+   59  ./catalina.sh start
+   60  ps -ef|grep tomcat
+   61  systemctl status tomcat
+   62  ls -l
+   63  cd ../
+   64  cd conf/
+   65  vi server.xml
+   66  cd ../
+   67  cd bin/
+   68  ./catalina.sh start
+   69  ./catalina.sh stop
+   70  ./catalina.sh start
+   71  pwd
+   72  sudo su -
+   73  pwd
+   74  cd /var/lib/jenkins
+   75  ls -l
+   76  cd workspace
+   77  ls -l
+   78  cd PipelineEx
+   79  ls -l
+   80  pwd
+   81  ls -l
+   82  cd target/
+   83  ls -l
+   84  cd /root
+   85  pwd
+   86  cp /var/lib/jenkins/workspace/PipelineEx/target/addressbook.war /usr/share/tomcat/webapps/
+   87  hostname controller
+   88  Hostname controller
+   89  pwd
+   90  ls l
+   91  ls -l
+   92  ls -la
+   93  cd .ssh/
+   94  ls -a
+   95  ls -l
+   96  ssh keygen
+   97  ssh-keygen
+   98  ls -la
+   99  cat id_rsa.pub
+  100  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDmYVje7mPKZ4pf1J4GwU+suOTeaCTGyPyBwCTSX972xUPNIaJH0bnfppAUqLbxfl2iVmsxKBMkMWWfBO+06deOTxHxR30HG47MLum2VXmNfKZzd1Q8BByXUJ20bMWHmC7VZQ6W73ZjiRIRBwe3HrF1hyuOyHOTGrAADiVCaYaN8+DJS0f5lEcFfJWL3Qk+syvdt4K5nihWTjs2/XKgk2cscTyWWoyKhBHN57wpa2UxBypQCZcQdreMrY0O7e4dqLYx5bcV1z+tyRlSWUZRjPAJqhL1CXVDw89U4/Kf6UTE2A1bwYBpxygv3Ggj2MUfrK/zQ5jqdZVoUvmCKjQT3TJ/ root@controller
+  101  cd /root
+  102  vi /etc/ansible/hosts
+  103  cd  /etc/ansible/hosts
+  104  cd /etc
+  105  cd anacrontab
+  106  cd ancible
+  107  ls -la
+  108  exit()
+  109  exit
+  110  cd /etc
+  111  cd /ansible
+  112  mkdir ansible
+  113  cd ansible/
+  114  vi host
+  115  cat host
+  116  ansible -m ping Testing-server
+  117  ansible -m ping Testing-Server
+  118  ls -l
+  119  mv host hosts
+  120  ansible -m ping Testing-Server
+  121  ssh root@15.207.16.181
+  122  ansible -m ping Testing-Server
+  123  history

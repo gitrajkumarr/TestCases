@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  tasks:
+   - name: Install wget utility
+     yum: name=wget state=present
+   - name: Install java
+     yum: name=java state=present
+   - name: set the jenkins.repo file under /etc/yum.repos.d
+     command: wget -o /etc/yum.repos.d/jenkins.repo http://pkg.jenkins.io/redhat-stable/jenkins.repo
+   - name: download the jenkins.io.key
+     command: rpm --import http://pkg.jenkins.io/redhat-stable/jenkins.io.key
+   - name: Installing jenkins
+     yum: name=jenkins state=present
+   - name: Staring jenkins
+     service: name=jenkins state=started
